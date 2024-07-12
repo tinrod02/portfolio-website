@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6799f7af12.js" crossorigin="anonymous"></script> 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+            <ul id="sidemenu">
+                <li><a href="#header" style="--i:1;" class="active">Home</a></li>
+                <li><a href="#about" style="--i:2;">About</a></li>
+                <li><a href="#services" style="--i:3;">Services</a></li>
+                <li><a href="#portfolio" style="--i:4;">Portfolio</a></li>
+                <li><a href="#contact" style="--i:5;">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <div class="fixed-icon">
+                <a href="https://github.com/tinrod02" target="_blank" class="github-icon"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </nav>
+        <div class="header-text">
+            <p>WELCOME TO MY WORLD</p>
+            <h1>Hi, I'm <span>Cristina Gail Rodelas</span></h1>
+            <h2>a <span id="role"></span></h2>
+            <p>I’m Cristina Gail Rodelas, a passionate wed developer with a knack<br>for turning ideas into reality.</p>
+            <a href="hireme.html" class="btnn">Hire Me</a>
+            <img src="images/html.png" alt="HTML-Logo">
+            <img src="images/javascript.png" alt="JavaScript-Logo">
+            <img src="images/css.png" alt="CSS-Logo">
+            <img src="images/python.png" alt="Python-Logo">
+            <img src="images/figma.png" alt="Figma-Logo">
+        </div>
+    </div>
+</div>
+<!--------------about------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.png">
+            </div>
+            <div class="about-col-2">
+                <a href="index1.html" class="btnn1">Let's Talk!</a>
+                <h1 class="sub-title">About <span>Me</span></h1>
+                <p>Hi there! Welcome to my corner of the web. I'm Cristina Gail Rodelas, a passionate web developer with a love for crafting engaging digital experiences. Join me on this journey as we explore the world of web development together. Let's turn ideas into reality, one line of code at a time!</p>
+                
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('demographic profile')">Demographic Profile</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('organization')">Oganization</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="demographic profile">
+                    <ul>
+                        <li><span>Name</span><br>Cristina Gail Rodelas</li>
+                        <li><span>Age</span><br>20</li>
+                        <li><span>Address</span><br>CCF Village Mayao Parada, Lucena City</li>
+                        <li><span>Phone Number</span><br>09166247624</li>
+                        <li><span>Email</span><br><a href="mailto:gailrods76@gmail.com">cristinarodelas@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>HTML/CSS</span><br>Front-end Coding</li>
+                        <li><span>Web Development</span><br>Testing and Debugging Skills</li>
+                        <li><span>Technical Skills</span><br>Responsive Design</li>
+                        <li><span>Workplace Skills</span><br>Creativity, Self-learning, Communication, Problem-solving</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="organization">
+                    <ul>
+                        <li><span>Present</span><br>IT Paradigm: Programming Team</li>
+                        <li><span>2023-Present</span><br>DLL Red Cross Youth</li>
+                        <li><span>2022-Present</span><br>DLL Sining ng Diwa</li>
+                        <li><span>2021-Present</span><br>Kabataan Kontra Droga at Terrorismo</li>
+                        <li><span>2021-Present</span><br>Ating Barkada Kontra Droga</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-Present</span><br>Dalubhasaan ng Lungsod ng Lucena</li>
+                        <li><span>2020-2022</span><br>Mayao Parada Agricultural Integrated Highschool</li>
+                        <li><span>2016-2020</span><br>Mayao Parada Agricultural Integrated Highschool</li>
+                        <li><span>2010-2016</span><br>Mayao Parada Elementary School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------services------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My <span>Services</span></h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Transform your online presence with our expert web design services, tailored to your unique brand identity and aimed at captivating your audience while maximizing user experience and functionality.</p>
+                <a href="web.html">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Elevate your digital experience with our expert UI/UX design services, tailored to seamlessly integrate user needs with intuitive interfaces, ensuring maximum engagement and satisfaction across diverse digital platforms.</p>
+                <a href="ux.html">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code-branch"></i>
+                <h2>Full-Stack Dev</h2>
+                <p>We offer comprehensive full-stack development services, seamlessly integrating front-end and back-end expertise to deliver scalable, user-centric solutions tailored to your unique business needs.</p>
+                <a href="full.html">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-----------------portfolio------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My  <span>Portfolio</span></h1>
+        <div class="work-list">
+            <div class="work" id="wor1">
+                <img src="images/wor1.png">
+                <div class="layer">
+                    <h3 >Social Media App</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="https://tinrod02.github.io/TwitFolio/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work" id="wor2">
+                <img src="images/wor2.png">
+                <div class="layer">
+                    <h3 >Resume</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="https://tinrod02.github.io/online-resume/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work" id="wor3">
+                <img src="images/wor3.png">
+                <div class="layer">
+                    <h3 >Online Shopping App</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="https://tinrod02.github.io/Fhukerat-Shoe_Website/#news"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work" id="wor4">
+                <img src="images/wor4.png">
+                <div class="layer">
+                    <h3>Calculator App</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="https://tinrod02.github.io/ipt101-calculator-app/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work" id="wor5">
+                <img src="images/wor5.png">
+                <div class="layer">
+                    <h3>Random Quote Generator</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="https://tinrod02.github.io/Quote-Generator/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work" id="wor6">
+                <img src="images/wor6.png">
+                <div class="layer">
+                    <h3>To do List</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="https://tinrod02.github.io/TodoList/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- See more button visibility -->
+        <a href="javascript:void(0);" id="see-more-btn" class="btn" onclick="toggleWork()">See more</a>
+    </div>
+</div>
+<!---------------contact-------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact <span>Me</span></h1>
+                <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:gailrods76@gmail.com">cristinarodelas@gmail.com</a></p>
+                <p><i class="fa-solid fa-square-phone"></i> 09166247624</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/cristinagail.rodelas.5?mibextid=JRoKGi" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/ambdxtrs_?t=wkI-YzsIljSAWVUisNGV-Q&s=09" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/_ms.gailll/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/tina-rodelas-213a4b2aa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/RODELAS-RESUME.docx" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="#">
+                    <input type="text" id="name"name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required> 
+                    <input type="subject" id="subject" name="subject" placeholder="Your Subject" required> 
+                    <textarea name="Message" id="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2024 | All Right Reserved</p>
+        <p>Developed by Cristina Gail C. Rodelas</p>
+    </div>
+</div>
+
+<a href="#" class="gotopbtn hidden" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+    
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

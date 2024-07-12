@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #671c73;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* arranger in columns*/
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .service h3 {
+            color: #bb47cc;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px 0;
+            background-color: #671c73;
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Design Services</h1>
+            <p>Create Your Online Presence</p>
+        </header>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to our web design services page. We specialize in crafting exceptional websites that not only look stunning but also perform brilliantly. Whether you're a startup, small business, or a seasoned enterprise, we're here to transform your online presence.</p>
+        </section>
+        <section id="what-we-offer">
+            <h2>What We Offer</h2>
+            <div class="grid">
+                <div class="service">
+                    <h3>Customized Designs</h3>
+                    <p>We create bespoke designs tailored to your brand identity and business goals, ensuring uniqueness and effectiveness.</p>
+                </div>
+                <div class="service">
+                    <h3>Responsive Layouts</h3>
+                    <p>Our designs adapt seamlessly across all devices, providing a consistent user experience on desktops, tablets, and smartphones.</p>
+                </div>
+                <div class="service">
+                    <h3>User-Centric Approach</h3>
+                    <p>We prioritize user experience, integrating intuitive navigation and engaging elements to maximize interaction and conversions.</p>
+                </div>
+                <div class="service">
+                    <h3>SEO Optimization</h3>
+                    <p>Enhance your visibility with SEO-friendly designs that improve search engine rankings and attract organic traffic.</p>
+                </div>
+                <div class="service">
+                    <h3>Content Management Systems</h3>
+                    <p>Implementing robust CMS solutions like WordPress or custom-built systems to manage your website efficiently.</p>
+                </div>
+                <div class="service">
+                    <h3>E-commerce Solutions</h3>
+                    <p>Developing secure and scalable e-commerce platforms that drive sales and enhance customer satisfaction.</p>
+                </div>
+            </div>
+        </section>
+        <section id="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Expertise:</strong> Our team comprises seasoned professionals with years of experience in web design and development.</li>
+                <li><strong>Creative Solutions:</strong> We blend creativity with technical expertise to deliver visually stunning and functional websites.</li>
+                <li><strong>Client-Centric Approach:</strong> We collaborate closely with clients to understand their unique needs and deliver tailored solutions.</li>
+                <li><strong>Proven Track Record:</strong> We have successfully launched numerous projects across various industries, achieving exceptional results.</li>
+                <li><strong>Continuous Support:</strong> Beyond launch, we provide ongoing support and maintenance to ensure your website remains optimal.</li>
+            </ul>
+        </section>
+        <section id="how-it-helps">
+            <h2>How It Helps You</h2>
+            <p>Our web design services empower you to:</p>
+            <ul>
+                <li>Establish a professional online presence that aligns with your brand.</li>
+                <li>Enhance user engagement and conversion rates through intuitive design.</li>
+                <li>Improve brand perception and credibility with a modern and responsive website.</li>
+                <li>Drive traffic and generate leads with SEO-optimized content and design.</li>
+                <li>Scale your business with flexible and scalable web solutions.</li>
+            </ul>
+        </section>
+        <section id="where-to-apply">
+            <h2>Where It Can Be Applied</h2>
+            <ul>
+                <li>Small to medium-sized businesses looking to establish their online presence.</li>
+                <li>Startups aiming to attract investors and build brand credibility.</li>
+                <li>Corporate entities seeking to revamp their digital strategy and improve user experience.</li>
+                <li>E-commerce businesses needing robust and secure online stores.</li>
+                <li>Individuals and professionals showcasing their portfolios or personal brands.</li>
+            </ul>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2024 | All rights reserved | <a href="mailto:gailrods76@gmail.com">Contact Us</a></p>
+        </footer>
+    </div>
+</body>
+</html>

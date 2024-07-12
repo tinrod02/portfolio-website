@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Talk!</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="contact-form" id="contactForm">
+            <h1>Let's talk!</h1>
+            <p>I will reply within 1 business day 100% of the time!</p>
+            <label for="firstName">First name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            
+            <label for="lastName">Last name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget" required>
+                <option value="">Select one...</option>
+                <option value="15,000k-30,000k">15,000k-30,000k</option>
+                <option value="50,000k-100,000k">50,000k-100,000k</option>
+                <option value="50,000k-100,000k">50,000k-100,000k</option>
+            </select>
+            <p>Knowing your budget helps me propose solutions that are catered exactly for you!</p>
+            
+            <label for="message">Message:</label>
+            <input id="message" name="message" placeholder="Let me know if you have any questions" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <button class="return-home-button" onclick="window.location.href = 'index.html';">Back</button>
+
+    <div class="chat-box" id="chat-box">
+        <div class="chat-header">
+            <img src="images/tinaa.jpg" alt="Avatar" class="avatar">
+            <div class="chat-title">Cristina Gail Rodelas</div>
+            <button class="minimize-chat" id="minimize-chat">-</button>
+            <button class="close-chat" id="close-chat">x</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message incoming">
+                <div class="chat-message-content">
+                    <div class="chat-message-text">Hi there!</div>
+                    <div class="chat-message-time">10:00 AM</div>
+                </div>
+            </div>
+            <div class="chat-message user">
+                <div class="chat-message-content">
+                    <div class="chat-message-text">Hello!</div>
+                    <div class="chat-message-time">10:01 AM</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message..." id="chat-input">
+            <button id="send-chat" class="send-chat">Send</button>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

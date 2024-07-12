@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me Inquiry</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #message-dialog {
+            background-color: white;
+            border: 1px solid #d9d9d9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 320px;
+        }
+
+        #message-form h2 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #message-form textarea {
+            width: 93%;
+            height: 80px;
+            border: 1px solid #d9d9d9;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            resize: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        #message-form p {
+            font-size: 12px;
+            color: #666;
+            margin: 0 0 10px;
+            line-height: 1.4;
+        }
+
+        #message-form a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #message-form a:hover {
+            text-decoration: underline;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #cancel-button, #send-button {
+            width: 45%;
+            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        #cancel-button {
+            background-color: #e6e6e6;
+            color: #333;
+        }
+
+        #send-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #cancel-button:hover {
+            background-color: #d4d4d4;
+        }
+
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+
+        #cancel-button:focus, #send-button:focus {
+            outline: none;
+            box-shadow: 0 0 2px 2px rgba(0, 123, 255, 0.5);
+        }
+
+        .modal {
+            display: none;
+            position: fixed; 
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 80%; 
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .modal-content p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .modal-button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .modal-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .modal-button.confirm {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-button.cancel {
+            background-color: #e6e6e6;
+            color: #333;
+        }
+
+        .modal-button.confirm:hover {
+            background-color: #0056b3;
+        }
+
+        .modal-button.cancel:hover {
+            background-color: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+    <div id="message-dialog">
+        <form id="message-form">
+            <h2>Send a message to Cristina RODELAS</h2>
+            <textarea id="message" name="message" placeholder="A message is required!" required></textarea>
+            <p>Replies to this message will be sent to <strong>cristinarodelas@gmail.com</strong></p>
+            <p>By sending this message, you agree to TinaRod Public <a href="terms.html">Terms of Service</a></p>
+            <div class="button-group">
+                <button type="button" id="cancel-button">Cancel</button>
+                <button type="submit" id="send-button">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to cancel?</p>
+            <div class="modal-button-group">
+                <button id="confirmCancel" class="modal-button confirm">Yes, Cancel</button>
+                <button id="modalClose" class="modal-button cancel">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('message-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const message = document.getElementById('message').value.trim();
+            
+            if (message === '') {
+                alert('Please enter a message.');
+            } else {
+                Email.send({
+                    SecureToken: "1b6061ad-327a-4836-8af3-be4e9b2541e1",
+                    To: 'gailrods76@gmail.com', 
+                    From: "gailrods76@gmail.com", 
+                    Subject: "Hire Me Inquiry",
+                    Body: message,
+                    ContentType: "text/html; charset=utf-8"
+                }).then(
+                    function(response) {
+                        if (response === 'OK') {
+                            Swal.fire({
+                                title: "Success!",
+                                text: "Message sent successfully!",
+                                icon: "success"
+                            }).then(() => {
+                                document.getElementById('message').value = '';
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error!",
+                                text: "Message failed to send. Please try again.",
+                                icon: "error"
+                            });
+                        }
+                    }
+                );
+            }
+        });
+
+        // cancel button
+        document.getElementById('cancel-button').addEventListener('click', function() {
+            document.getElementById('confirmModal').style.display = 'block';
+        });
+
+        document.getElementById('modalClose').addEventListener('click', function() {
+            document.getElementById('confirmModal').style.display = 'none';
+        });
+
+        document.getElementById('confirmCancel').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+    </script>
+</body>
+</html>
